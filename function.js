@@ -43,7 +43,7 @@ currentData.innerHTML = `${day}, ${currentNumber} ${currentMonth} `;
 function showSearchTemp(response) {
   let temperatureElement = Math.round(response.data.main.temp);
   let temp = document.querySelector(".temperature");
-  temp.innerHTML = `${temperatureElement}`;
+  temp.innerHTML = `${temperatureElement}°C`;
 
   let showHumidity = document.querySelector(".humidity");
   showHumidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
@@ -68,7 +68,7 @@ function changeCity(event) {
   axios.get(apiUrl).then(showSearchTemp);
 }
 
-let weather = document.querySelector("#submit-city");
+let weather = document.querySelector(".first-button");
 weather.addEventListener("click", changeCity);
 
 // 4 task
@@ -79,7 +79,7 @@ function showDetails(response) {
 
   let temperature = Math.round(response.data.main.temp);
   let yourTemperature = document.querySelector(".temperature");
-  yourTemperature.innerHTML = `${temperature}`;
+  yourTemperature.innerHTML = `${temperature}°C`;
 
   let showHumidity = document.querySelector(".humidity");
   showHumidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
@@ -104,5 +104,5 @@ function showPosition(position) {
 function showData() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
-let yourWeather = document.querySelector("#current-weather");
+let yourWeather = document.querySelector(".second-button");
 yourWeather.addEventListener("click", showData);
