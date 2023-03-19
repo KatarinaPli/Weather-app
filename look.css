@@ -224,3 +224,18 @@ body {
 .weather-conditions {
   text-transform: capitalize;
 }
+
+.source {
+  text-align: right;
+  font-size: 15px;
+  font-family: "Abril Fatface";
+  font-family: "Kanit", sans-serif;
+  font-weight: 100;
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.845);
+  text-shadow: 5px 5px 10px rgba(151, 151, 151, 0.614);
+}
+a {
+  text-decoration: none;
+  color: rgba(228, 209, 0, 0.879);
+}
