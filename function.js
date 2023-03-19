@@ -52,7 +52,7 @@ function showSearchTemp(response) {
   let showWind = document.querySelector(".wind");
   showWind.innerHTML = `Wind: ${speedWindElement} km/h`;
 
-  let showDescription = document.querySelector(".weatherConditions");
+  let showDescription = document.querySelector(".weather-conditions");
   showDescription.innerHTML = ` ${response.data.weather[0].description}`;
 }
 
@@ -88,7 +88,7 @@ function showDetails(response) {
   let showWind = document.querySelector(".wind");
   showWind.innerHTML = `Wind: ${speedWindElement} km/h`;
 
-  let showDescription = document.querySelector(".weatherConditions");
+  let showDescription = document.querySelector(".weather-conditions");
   showDescription.innerHTML = ` ${response.data.weather[0].description}`;
 }
 
