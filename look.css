@@ -211,3 +211,14 @@ body {
   cursor: pointer;
   background-color: rgb(97, 21, 21);
 }
+
+.description {
+  color: rgba(255, 253, 253, 0.749);
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: "Abril Fatface";
+  font-family: "Kanit", sans-serif;
+  display: block;
+  padding-left: 4%;
+}
