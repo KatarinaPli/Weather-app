@@ -38,3 +38,71 @@ let months = [
 let currentMonth = months[nowTwo.getMonth()];
 let currentNumber = nowTwo.getDate();
 currentData.innerHTML = `${day}, ${currentNumber} ${currentMonth} `;
+
+//3 task
+function showSearchTemp(response) {
+  let temperatureElement = Math.round(response.data.main.temp);
+  let temp = document.querySelector(".temperature");
+  temp.innerHTML = `${temperatureElement}`;
+
+  let showHumidity = document.querySelector(".humidity");
+  showHumidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+
+  let speedWindElement = Math.round(response.data.wind.speed);
+  let showWind = document.querySelector(".wind");
+  showWind.innerHTML = `Wind: ${speedWindElement} km/h`;
+
+  let showDescription = document.querySelector(".weatherConditions");
+  showDescription.innerHTML = ` ${response.data.weather[0].description}`;
+}
+
+function changeCity(event) {
+  event.preventDefault();
+  let city = document.querySelector("#search");
+  let h1 = document.querySelector(".city");
+  h1.innerHTML = city.value;
+  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
+  let apiKey = "4b3503b2f08a729413c4d33ef1186004";
+  let units = "metric";
+  let apiUrl = `${apiEndpoint}?q=${city.value}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showSearchTemp);
+}
+
+let weather = document.querySelector("#submit-city");
+weather.addEventListener("click", changeCity);
+
+// 4 task
+
+function showDetails(response) {
+  let h1 = document.querySelector(".city");
+  h1.innerHTML = response.data.name;
+
+  let temperature = Math.round(response.data.main.temp);
+  let yourTemperature = document.querySelector(".temperature");
+  yourTemperature.innerHTML = `${temperature}`;
+
+  let showHumidity = document.querySelector(".humidity");
+  showHumidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+
+  let speedWindElement = Math.round(response.data.wind.speed);
+  let showWind = document.querySelector(".wind");
+  showWind.innerHTML = `Wind: ${speedWindElement} km/h`;
+
+  let showDescription = document.querySelector(".weatherConditions");
+  showDescription.innerHTML = ` ${response.data.weather[0].description}`;
+}
+
+function showPosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiKey = "4b3503b2f08a729413c4d33ef1186004";
+  let units = "metric";
+  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
+  let apiUrl = `${apiEndpoint}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showDetails);
+}
+function showData() {
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+let yourWeather = document.querySelector("#current-weather");
+yourWeather.addEventListener("click", showData);
