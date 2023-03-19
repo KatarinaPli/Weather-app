@@ -1,0 +1,213 @@
+body {
+  background-image: url("img/J2.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card {
+  position: absolute;
+  padding: 30px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(21px);
+  -webkit-backdrop-filter: blur(21px);
+  display: block;
+  box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  margin: 0;
+  width: 96%;
+  left: 0;
+  bottom: 0;
+}
+.row {
+  display: flex;
+  flex-direction: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.mon,
+.tue,
+.wed,
+.thu,
+.fri,
+.sat,
+.sun {
+  font-family: "Abril Fatface", cursive;
+  font-family: "Raleway", sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.501);
+
+  border-bottom-width: thin;
+  box-shadow: 0px 9px 30px rgba(0, 0, 0, 0.351);
+  font-weight: 400;
+  border-radius: 30px;
+  color: rgb(255, 255, 255);
+
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.icon1,
+.icon2,
+.icon3,
+.icon4,
+.icon5,
+.icon6,
+.icon7 {
+  font-size: 50px;
+
+  margin-left: 10px;
+}
+.temp1,
+.temp2,
+.temp3,
+.temp4,
+.temp5,
+.temp6,
+.temp7 {
+  font-size: 33px;
+  font-weight: 400;
+
+  margin: 0;
+  color: rgba(255, 255, 255, 0.827);
+  text-shadow: rgba(0, 0, 0, 0.362) 1px 0 7px;
+  font-family: "Abril Fatface", cursive;
+  font-family: "Kanit", sans-serif;
+  margin-left: 8px;
+}
+
+#search {
+  position: absolute;
+  border-radius: 20px;
+  width: 1200px;
+  top: 10px;
+  left: 11%;
+  font-size: 26px;
+  border: 1px solid rgba(0, 0, 0, 0.251);
+  background: linear-gradient(
+    135deg,
+    rgba(11, 11, 11, 0.445),
+    rgba(11, 11, 11, 0.445)
+  );
+  box-shadow: 0px 9px 30px rgba(82, 41, 85, 0.295);
+  transition: all 300ms ease-in-out;
+  font-family: "Abril Fatface", cursive;
+  font-family: "Raleway", sans-serif;
+  text-align: left;
+  font-style: italic;
+}
+#search:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.311),
+    rgba(255, 255, 255, 0.311)
+  );
+  box-shadow: 0px 9px 30px rgba(39, 19, 41, 0.345);
+  cursor: pointer;
+  color: rgba(17, 14, 17, 0.853);
+}
+#menu {
+  font-size: 37px;
+  display: block;
+  position: fixed;
+  top: 1.5%;
+  left: 6%;
+  color: #ffffffac;
+
+  transition: 200ms;
+}
+#menu:hover {
+  cursor: pointer;
+  font-size: 43px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.left,
+.right {
+  font-family: "Abril Fatface", cursive;
+  font-family: "Raleway", sans-serif;
+  padding-top: 40px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.maneicon {
+  font-size: 120px;
+}
+.temperature {
+  font-size: 55px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.868);
+  text-shadow: rgba(0, 0, 0, 0.334) 1px 0 7px;
+  font-family: "Abril Fatface", cursive;
+  font-family: "Kanit", sans-serif;
+}
+.data {
+  font-style: italic;
+  color: rgba(255, 253, 253, 0.64);
+  padding: 15px;
+}
+.city {
+  font-weight: 600;
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.767);
+  text-shadow: rgba(0, 0, 0, 0.334) 1px 0 7px;
+}
+.country {
+  font-size: larger;
+  font-style: italic;
+  color: rgba(255, 253, 253, 0.666);
+  padding: 40px;
+}
+
+.time {
+  font-size: 55px;
+  font-weight: 600;
+  color: rgba(97, 21, 21, 0.842);
+  text-shadow: rgba(0, 0, 0, 0.334) 1px 0 7px;
+
+  font-family: "Abril Fatface", cursive;
+  font-family: "Kanit", sans-serif;
+}
+.buttons {
+  margin-left: 50px;
+  margin-top: 40px;
+}
+.first-button,
+.second-button {
+  padding: 17px 26px;
+  margin: 15px auto 15px auto;
+
+  font-size: 14px;
+  border-bottom-width: thin;
+
+  transition: all 200ms ease-in-out;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.334) 1px 0 7px;
+}
+.first-button {
+  background-color: rgba(255, 255, 255, 0.688);
+  border: 1px solid rgb(255, 255, 255);
+  color: rgba(97, 21, 21, 0.729);
+}
+.second-button {
+  background-color: rgba(97, 21, 21, 0.695);
+  border: 1px solid rgb(97, 21, 21);
+  color: rgb(255, 255, 255);
+  margin-left: 10px;
+}
+.first-button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.981);
+}
+.second-button:hover {
+  cursor: pointer;
+  background-color: rgb(97, 21, 21);
+}
