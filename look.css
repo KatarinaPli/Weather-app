@@ -226,7 +226,9 @@ body {
 }
 
 .source {
-  text-align: right;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   font-size: 15px;
   font-family: "Abril Fatface";
   font-family: "Kanit", sans-serif;
