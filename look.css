@@ -130,6 +130,8 @@ body {
 .wrapper {
   display: flex;
   justify-content: space-between;
+  margin-inline-start: 2%;
+  margin-inline-end: 2%;
 }
 .left,
 .right {
@@ -139,15 +141,23 @@ body {
 }
 
 .maneicon {
-  width: 130px;
+  width: 120px;
 }
 .temperature {
   font-size: 60px;
   float: right;
-  padding-top: 30px;
+
   font-weight: 500;
   color: rgba(255, 255, 255, 0.838);
   text-shadow: rgba(0, 0, 0, 0.288) 1px 0 7px;
+  line-height: 2;
+}
+.temperature small {
+  font-size: 23px;
+  position: relative;
+  top: -28px;
+  padding-left: 0;
+  margin-left: 0;
 }
 .data {
   font-style: italic;
@@ -159,14 +169,22 @@ body {
   font-size: 60px;
   color: rgba(255, 255, 255, 0.838);
   text-shadow: rgba(0, 0, 0, 0.288) 1px 0 7px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .time {
-  font-size: 55px;
-  font-weight: 600;
-  color: rgba(97, 21, 21, 0.842);
-  text-shadow: rgba(0, 0, 0, 0.334) 1px 0 7px;
+  font-weight: 500;
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.838);
+  text-shadow: rgba(0, 0, 0, 0.349) 1px 0 7px;
   font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.time small {
+  font-size: 35px;
+  padding: 0;
+  margin: 0;
 }
 .buttons {
   margin-left: 50px;
