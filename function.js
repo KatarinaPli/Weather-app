@@ -49,6 +49,11 @@ currentData.innerHTML = `${day}, ${currentNumber} ${currentMonth} `;
 function showSearchTemp(response) {
   let temperatureElement = Math.round(response.data.main.temp);
   let temp = document.querySelector(".temperature");
+  if (temperatureElement > 0) {
+    temperatureElement = `+${temperatureElement}`;
+  } else if (temperatureElement < 0) {
+    temperatureElement = `-${temperatureElement}`;
+  }
   temp.innerHTML = `${temperatureElement}<small>°C|°F</small>`;
 
   let showHumidity = document.querySelector(".humidity");
