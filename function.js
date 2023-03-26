@@ -45,16 +45,17 @@ let currentMonth = months[nowTwo.getMonth()];
 let currentNumber = nowTwo.getDate();
 currentData.innerHTML = `${day}, ${currentNumber} ${currentMonth} `;
 
-//3 task reate a Current Temperature MAIN
+//3 task reate a Current Temperature MAIN and CHANGE THE MAIN ICON DEPENDES ON TEMP
 function showSearchTemp(response) {
-  let temperatureElement = Math.round(response.data.main.temp);
+  celciusTemperature = response.data.main.temp;
+  let temperatureElement = Math.round(celciusTemperature);
   let temp = document.querySelector(".temperature");
   if (temperatureElement > 0) {
     temperatureElement = `+${temperatureElement}`;
   } else if (temperatureElement < 0) {
     temperatureElement = `-${temperatureElement}`;
   }
-  temp.innerHTML = `${temperatureElement}<small>°C|°F</small>`;
+  temp.innerHTML = `${temperatureElement}<small>°C|<a href="#" class="fahrenheit-convertion">°F</a></small>`;
 
   let showHumidity = document.querySelector(".humidity");
   showHumidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
@@ -96,7 +97,7 @@ function showDetails(response) {
 
   let temperature = Math.round(response.data.main.temp);
   let yourTemperature = document.querySelector(".temperature");
-  yourTemperature.innerHTML = `${temperature}°C`;
+  yourTemperature.innerHTML = `${temperature}<small>°C|<a href="#" class="fahrenheit-convertion">°F</a></small>`;
 
   let showHumidity = document.querySelector(".humidity");
   showHumidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
@@ -107,12 +108,6 @@ function showDetails(response) {
 
   let showDescription = document.querySelector(".weather-conditions");
   showDescription.innerHTML = ` ${response.data.weather[0].description}`;
-  // let maneIcon = document.querySelector(".maneicon");
-
-  // maneIcon.setAttribute(
-  //   "src",
-  //   `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  // );
 }
 
 // 5 task CURRENT WEATHER BASED ON  YOUR LAT I LON POSITION
@@ -131,4 +126,16 @@ function showData() {
 let yourWeather = document.querySelector(".second-button");
 yourWeather.addEventListener("click", showData);
 
-// 6 task CHANGE THE MAIN ICON DEPENDES ON TEMP
+// 6 task Fahrenheit Convertion
+/*function showFarenheiTemperature(event) {
+  event.preventDefault();
+
+  let temperatureElement = document.querySelector(".temperature");
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let fahrenheitConvertion = document.querySelector(".fahrenheit-convertion");
+fahrenheitConvertion.addEventListener("click", showFarenheiTemperature);
+*/
+//${temperatureElement}
