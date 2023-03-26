@@ -187,7 +187,7 @@ body {
   margin: 0;
 }
 .buttons {
-  margin-left: 50px;
+  margin-left: 45px;
   margin-top: 15px;
 }
 .first-button,
@@ -203,35 +203,45 @@ body {
   box-shadow: rgba(0, 0, 0, 0.334) 1px 0 7px;
 }
 .first-button {
-  background-color: rgba(255, 255, 255, 0.688);
-  border: 1px solid rgb(255, 255, 255);
-  color: rgba(97, 21, 21, 0.729);
+  background-color: #3d3b53ba;
+  border: 1px solid #343347;
+  color: rgb(255, 255, 255);
 }
 .second-button {
-  background-color: rgba(97, 21, 21, 0.695);
-  border: 1px solid rgb(97, 21, 21);
-  color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.688);
+  border: 1px solid rgb(255, 255, 255);
+  color: #343347;
   margin-left: 10px;
 }
 .first-button:hover {
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.981);
+
+  background-color: #353348;
 }
 .second-button:hover {
   cursor: pointer;
-  background-color: rgb(97, 21, 21);
+
+  background-color: rgb(255, 255, 255);
 }
 
 .description {
-  color: rgba(255, 253, 253, 0.749);
-  padding: 10px;
   font-size: 20px;
-  font-weight: 100;
+  font-weight: 400;
   font-family: "Montserrat", sans-serif;
   display: block;
-  padding-left: 4%;
+  margin-left: 3%;
+  color: rgba(255, 255, 255, 0.838);
+  text-shadow: rgba(0, 0, 0, 0.37) 1px 0 7px;
 }
-
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0.2em;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
 .weather-conditions:first-letter {
   text-transform: capitalize;
 }
