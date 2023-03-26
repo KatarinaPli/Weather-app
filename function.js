@@ -3,7 +3,13 @@ let now = new Date();
 let currentTime = document.querySelector(".time");
 
 let hour = now.getHours();
+if (hour < 10) {
+  hour = `0${hour}`;
+}
 let minute = now.getMinutes();
+if (minute < 10) {
+  minute = `0${minute}`;
+}
 currentTime.innerHTML = `${hour}:${minute} <small>PM</small>`;
 
 // 2 task
@@ -11,7 +17,7 @@ let nowTwo = new Date();
 let currentData = document.querySelector(".data");
 
 let currentDayOfWeek = [
-  "Sanday",
+  "Sunday",
   "Monday",
   "Tuesday",
   "Wednesday",

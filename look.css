@@ -221,7 +221,7 @@ body {
   padding-left: 4%;
 }
 
-.weather-conditions {
+.weather-conditions:first-letter {
   text-transform: capitalize;
 }
 
