@@ -36,14 +36,13 @@ body {
 .fri,
 .sat,
 .sun {
-  font-family: "Abril Fatface", cursive;
-  font-family: "Raleway", sans-serif;
+  font-size: "Montserrat", sans-serif;
   border: 1px solid rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.501);
 
   border-bottom-width: thin;
   box-shadow: 0px 9px 30px rgba(0, 0, 0, 0.351);
-  font-weight: 400;
+  font-weight: 200;
   border-radius: 30px;
   color: rgb(255, 255, 255);
 
@@ -69,24 +68,27 @@ body {
 .temp5,
 .temp6,
 .temp7 {
-  font-size: 33px;
-  font-weight: 400;
+  font-size: 30px;
 
   margin: 0;
   color: rgba(255, 255, 255, 0.827);
   text-shadow: rgba(0, 0, 0, 0.362) 1px 0 7px;
-  font-family: "Abril Fatface", cursive;
-  font-family: "Kanit", sans-serif;
+
+  font-size: "Montserrat", sans-serif;
+  font-weight: 400;
   margin-left: 8px;
 }
 
 #search {
-  position: absolute;
+  /* position: absolute;
+ */
   border-radius: 20px;
-  width: 1200px;
+  position: relative;
+  width: 1000px;
   top: 10px;
   left: 11%;
-  font-size: 26px;
+  padding: 8px;
+  font-size: 20px;
   border: 1px solid rgba(0, 0, 0, 0.251);
   background: linear-gradient(
     135deg,
@@ -95,8 +97,10 @@ body {
   );
   box-shadow: 0px 9px 30px rgba(82, 41, 85, 0.295);
   transition: all 300ms ease-in-out;
-  font-family: "Abril Fatface", cursive;
-  font-family: "Raleway", sans-serif;
+  font-size: "Montserrat";
+  font-style: italic;
+  font-weight: 200;
+
   text-align: left;
 }
 #search:hover {
@@ -129,23 +133,21 @@ body {
 }
 .left,
 .right {
-  font-family: "Abril Fatface", cursive;
-  font-family: "Raleway", sans-serif;
-  padding-top: 40px;
-  padding-left: 35px;
-  padding-right: 35px;
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  padding-top: 28px;
 }
 
 .maneicon {
-  font-size: 120px;
+  width: 130px;
 }
 .temperature {
-  font-size: 55px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.868);
-  text-shadow: rgba(0, 0, 0, 0.334) 1px 0 7px;
-  font-family: "Abril Fatface", cursive;
-  font-family: "Kanit", sans-serif;
+  font-size: 60px;
+  float: right;
+  padding-top: 30px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.838);
+  text-shadow: rgba(0, 0, 0, 0.288) 1px 0 7px;
 }
 .data {
   font-style: italic;
@@ -153,16 +155,10 @@ body {
   padding: 15px;
 }
 .city {
-  font-weight: 600;
-  font-size: 50px;
-  color: rgba(255, 255, 255, 0.767);
-  text-shadow: rgba(0, 0, 0, 0.334) 1px 0 7px;
-}
-.country {
-  font-size: larger;
-  font-style: italic;
-  color: rgba(255, 253, 253, 0.666);
-  padding: 40px;
+  font-weight: 500;
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.838);
+  text-shadow: rgba(0, 0, 0, 0.288) 1px 0 7px;
 }
 
 .time {
@@ -170,13 +166,11 @@ body {
   font-weight: 600;
   color: rgba(97, 21, 21, 0.842);
   text-shadow: rgba(0, 0, 0, 0.334) 1px 0 7px;
-
-  font-family: "Abril Fatface", cursive;
-  font-family: "Kanit", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .buttons {
   margin-left: 50px;
-  margin-top: 40px;
+  margin-top: 15px;
 }
 .first-button,
 .second-button {
@@ -215,8 +209,7 @@ body {
   padding: 10px;
   font-size: 20px;
   font-weight: 100;
-  font-family: "Abril Fatface";
-  font-family: "Kanit", sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: block;
   padding-left: 4%;
 }
@@ -230,8 +223,7 @@ body {
   bottom: 0;
   left: 0;
   font-size: 15px;
-  font-family: "Abril Fatface";
-  font-family: "Kanit", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 100;
   margin-top: 30px;
   color: rgba(255, 255, 255, 0.845);
