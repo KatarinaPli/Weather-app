@@ -49,7 +49,7 @@ currentData.innerHTML = `${day}, ${currentNumber} ${currentMonth} `;
 function showSearchTemp(response) {
   let temperatureElement = Math.round(response.data.main.temp);
   let temp = document.querySelector(".temperature");
-  temp.innerHTML = `${temperatureElement}°C`;
+  temp.innerHTML = `${temperatureElement}<small>°C|°F</small>`;
 
   let showHumidity = document.querySelector(".humidity");
   showHumidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
@@ -74,7 +74,7 @@ function changeCity(event) {
   axios.get(apiUrl).then(showSearchTemp);
 }
 
-let weather = document.querySelector(".first-button");
+let weather = document.querySelector(".search-button");
 weather.addEventListener("click", changeCity);
 
 // 4 task

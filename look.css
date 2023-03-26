@@ -126,6 +126,13 @@ body {
   left: 24%;
   font-family: "Montserrat";
   font-weight: 400;
+  transition: all 300ms ease-in-out;
+}
+.search-button:hover {
+  background-color: rgba(215, 215, 215, 0.598);
+  border: 1px solid rgba(134, 134, 134, 0.703);
+  color: #2a2939;
+  cursor: pointer;
 }
 
 .wrapper {
