@@ -1,4 +1,4 @@
-// 1 task
+// 1 task Create a Current Fime
 let now = new Date();
 let currentTime = document.querySelector(".time");
 
@@ -12,7 +12,7 @@ if (minute < 10) {
 }
 currentTime.innerHTML = `${hour}:${minute} <small>PM</small>`;
 
-// 2 task
+// 2 task Create a Current Data
 let nowTwo = new Date();
 let currentData = document.querySelector(".data");
 
@@ -45,7 +45,7 @@ let currentMonth = months[nowTwo.getMonth()];
 let currentNumber = nowTwo.getDate();
 currentData.innerHTML = `${day}, ${currentNumber} ${currentMonth} `;
 
-//3 task
+//3 task reate a Current Temperature MAIN
 function showSearchTemp(response) {
   let temperatureElement = Math.round(response.data.main.temp);
   let temp = document.querySelector(".temperature");
@@ -65,6 +65,12 @@ function showSearchTemp(response) {
 
   let showDescription = document.querySelector(".weather-conditions");
   showDescription.innerHTML = ` ${response.data.weather[0].description}`;
+  let maneIcon = document.querySelector(".maneicon");
+
+  maneIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function changeCity(event) {
@@ -82,7 +88,7 @@ function changeCity(event) {
 let weather = document.querySelector(".search-button");
 weather.addEventListener("click", changeCity);
 
-// 4 task
+// 4 task DESCRIPTION
 
 function showDetails(response) {
   let h1 = document.querySelector(".city");
@@ -101,8 +107,15 @@ function showDetails(response) {
 
   let showDescription = document.querySelector(".weather-conditions");
   showDescription.innerHTML = ` ${response.data.weather[0].description}`;
+  // let maneIcon = document.querySelector(".maneicon");
+
+  // maneIcon.setAttribute(
+  //   "src",
+  //   `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  // );
 }
 
+// 5 task CURRENT WEATHER BASED ON  YOUR LAT I LON POSITION
 function showPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
@@ -117,3 +130,5 @@ function showData() {
 }
 let yourWeather = document.querySelector(".second-button");
 yourWeather.addEventListener("click", showData);
+
+// 6 task CHANGE THE MAIN ICON DEPENDES ON TEMP
