@@ -68,15 +68,15 @@ body {
 .temp5,
 .temp6,
 .temp7 {
-  font-size: 30px;
+  font-size: 23px;
 
   margin: 0;
   color: rgba(255, 255, 255, 0.827);
   text-shadow: rgba(0, 0, 0, 0.362) 1px 0 7px;
 
-  font-size: "Montserrat", sans-serif;
-  font-weight: 400;
-  margin-left: 8px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  margin-left: 15px;
 }
 
 #search {
@@ -259,5 +259,5 @@ ul {
 }
 a {
   text-decoration: none;
-  color: rgba(228, 209, 0, 0.879);
+  color: rgba(164, 211, 10, 0.947);
 }
