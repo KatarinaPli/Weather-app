@@ -87,10 +87,11 @@ function changeCity(event) {
 }
 function displayFarenheiTemperature(event) {
   event.preventDefault();
-  let fahrenheitTemperature = (5 * 9) / 5 + 32;
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector(".temperature");
-  temperatureElement.innerHTML = fahrenheitTemperature;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
+let celciusTemperature = null;
 let weather = document.querySelector(".search-button");
 weather.addEventListener("click", changeCity);
 
