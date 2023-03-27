@@ -55,7 +55,7 @@ function showSearchTemp(response) {
   } else if (temperatureElement < 0) {
     temperatureElement = `-${temperatureElement}`;
   }
-  temp.innerHTML = `${temperatureElement}<small>°C|<a href="#" class="fahrenheit-convertion">°F</a></small>`;
+  temp.innerHTML = `${temperatureElement}`;
 
   let showHumidity = document.querySelector(".humidity");
   showHumidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
@@ -85,9 +85,17 @@ function changeCity(event) {
   let apiUrl = `${apiEndpoint}?q=${city.value}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showSearchTemp);
 }
-
+function displayFarenheiTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (5 * 9) / 5 + 32;
+  let temperatureElement = document.querySelector(".temperature");
+  temperatureElement.innerHTML = fahrenheitTemperature;
+}
 let weather = document.querySelector(".search-button");
 weather.addEventListener("click", changeCity);
+
+let fahrenheitLink = document.querySelector(".fahrenheit-convertion");
+fahrenheitLink.addEventListener("click", displayFarenheiTemperature);
 
 // 4 task DESCRIPTION
 
@@ -97,7 +105,7 @@ function showDetails(response) {
 
   let temperature = Math.round(response.data.main.temp);
   let yourTemperature = document.querySelector(".temperature");
-  yourTemperature.innerHTML = `${temperature}<small>°C|<a href="#" class="fahrenheit-convertion">°F</a></small>`;
+  yourTemperature.innerHTML = `${temperature}`;
 
   let showHumidity = document.querySelector(".humidity");
   showHumidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;

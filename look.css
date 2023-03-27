@@ -151,7 +151,8 @@ body {
 .maneicon {
   width: 120px;
 }
-.temperature {
+small .temperature,
+.units {
   font-size: 60px;
   float: right;
 
@@ -160,13 +161,18 @@ body {
   text-shadow: rgba(0, 0, 0, 0.288) 1px 0 7px;
   line-height: 2;
 }
-.temperature small {
+
+.units {
+  line-height: 4;
+
   font-size: 20px;
   position: relative;
-  top: -28px;
-  padding-left: 0;
-  margin-left: 0;
+  float: inline-end;
+
+  color: rgba(255, 255, 255, 0.838);
+  text-shadow: rgba(0, 0, 0, 0.288) 1px 0 7px;
 }
+
 .data {
   font-style: italic;
   color: rgba(255, 253, 253, 0.64);
