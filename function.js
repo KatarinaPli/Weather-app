@@ -85,11 +85,17 @@ function changeCity(event) {
   let apiUrl = `${apiEndpoint}?q=${city.value}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showSearchTemp);
 }
+changeCity(Tokyo);
 function displayFarenheiTemperature(event) {
   event.preventDefault();
   let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector(".temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
 let celciusTemperature = null;
 let weather = document.querySelector(".search-button");
@@ -97,6 +103,9 @@ weather.addEventListener("click", changeCity);
 
 let fahrenheitLink = document.querySelector(".fahrenheit-convertion");
 fahrenheitLink.addEventListener("click", displayFarenheiTemperature);
+
+let celciusLink = document.querySelector(".celcius-convertion");
+celciusLink.addEventListener("click", displayCelciusTemperature);
 
 // 4 task DESCRIPTION
 
@@ -134,17 +143,3 @@ function showData() {
 }
 let yourWeather = document.querySelector(".second-button");
 yourWeather.addEventListener("click", showData);
-
-// 6 task Fahrenheit Convertion
-/*function showFarenheiTemperature(event) {
-  event.preventDefault();
-
-  let temperatureElement = document.querySelector(".temperature");
-  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-let fahrenheitConvertion = document.querySelector(".fahrenheit-convertion");
-fahrenheitConvertion.addEventListener("click", showFarenheiTemperature);
-*/
-//${temperatureElement}
