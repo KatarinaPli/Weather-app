@@ -74,7 +74,7 @@ function showSearchTemp(response) {
   );
 }
 
-function changeCity(event) {
+function changeCity /*search*/(event) {
   event.preventDefault();
   let city = document.querySelector("#search");
   let h1 = document.querySelector(".city");
@@ -85,7 +85,20 @@ function changeCity(event) {
   let apiUrl = `${apiEndpoint}?q=${city.value}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showSearchTemp);
 }
-changeCity(Tokyo);
+/*
+function search(city) {
+  let apiKey = "2ff29bed3181c3526c35cc5408037f85";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showSearchTemp);
+}
+*/
+/*
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#search");
+  search(cityInputElement.value);
+}*/
+
 function displayFarenheiTemperature(event) {
   event.preventDefault();
   let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
@@ -143,3 +156,5 @@ function showData() {
 }
 let yourWeather = document.querySelector(".second-button");
 yourWeather.addEventListener("click", showData);
+
+/*search(Tokyo);*/
