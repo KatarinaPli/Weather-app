@@ -162,6 +162,15 @@ body {
 .maneicon {
   width: 120px;
 }
+.pm {
+  font-size: 23px;
+  padding: 0;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.838);
+  text-shadow: rgba(0, 0, 0, 0.349) 1px 0 7px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
 small .temperature,
 .units {
   font-size: 60px;
