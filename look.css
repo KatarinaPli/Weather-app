@@ -205,6 +205,14 @@ small .temperature,
   text-shadow: rgba(0, 0, 0, 0.288) 1px 0 7px;
   font-family: "Montserrat", sans-serif;
 }
+.time-update-string {
+  text-shadow: rgba(0, 0, 0, 0.336) 1px 0 7px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 15px;
+  font-style: italic;
+  color: rgba(255, 253, 253, 0.692);
+}
 
 .time {
   font-weight: 500;

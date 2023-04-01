@@ -61,9 +61,10 @@ function displayTemperature(response) {
   timeElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 // api connection
+let city = "Tokyo";
 let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
 let apiKey = "4b3503b2f08a729413c4d33ef1186004";
 let units = "metric";
-let apiUrl = `${apiEndpoint}?q=Tokyo&appid=${apiKey}&units=${units}`;
+let apiUrl = `${apiEndpoint}?q=${city}&appid=${apiKey}&units=${units}`;
 
 axios.get(apiUrl).then(displayTemperature);
