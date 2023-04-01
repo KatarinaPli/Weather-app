@@ -34,9 +34,15 @@ currentData.innerHTML = `${day}, ${currentNumber} ${currentMonth} `;
 function displayTemperature(response) {
   let temperatureElement = document.querySelector(".temperature");
   let cityElement = document.querySelector(".city");
+  let weatherConditionsElement = document.querySelector(".weather-conditions");
+  let humidityElement = document.querySelector(".show-humidity");
+  let windElement = document.querySelector(".show-wind");
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
+  weatherConditionsElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 // api connection
 let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
