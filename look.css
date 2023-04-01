@@ -215,11 +215,7 @@ small .temperature,
   padding: 0;
   margin: 0;
 }
-.time small {
-  font-size: 23px;
-  padding: 0;
-  margin: 0;
-}
+
 .buttons {
   margin-left: 45px;
   margin-top: 15px;
