@@ -54,7 +54,8 @@ function displayTemperature(response) {
   let timeElement = document.querySelector(".time");
   let iconElement = document.querySelector(".maneicon");
 
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  celciusTemperature = response.data.main.temp;
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
   cityElement.innerHTML = response.data.name;
   weatherConditionsElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
@@ -83,9 +84,21 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#search-string");
   search(cityInputElement.value);
 }
+//Farenheit convertion
+function displayFarenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector(".temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+let celciusTemperature = null;
 
-// show the first city by default
-search("Tokyo");
 // search form
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+//farinheit
+let farenheitLink = document.querySelector(".fahrenheit-convertion");
+farenheitLink.addEventListener("click", displayFarenheitTemperature);
+// show the first city by default
+search("Tokyo");
