@@ -49,6 +49,7 @@ body {
   padding: 8px 15px;
   cursor: pointer;
   font-size: 15px;
+  margin: 0 auto;
 }
 .icon1,
 .icon2,
@@ -59,7 +60,7 @@ body {
 .icon7 {
   font-size: 50px;
 
-  margin: auto;
+  margin: 0 auto;
 }
 .temp1,
 .temp2,
@@ -68,17 +69,25 @@ body {
 .temp5,
 .temp6,
 .temp7 {
-  font-size: 22px;
+  font-size: 21px;
 
-  margin: auto;
-  color: rgba(255, 255, 255, 0.751);
+  color: rgba(238, 238, 238, 0.751);
   text-shadow: rgba(0, 0, 0, 0.362) 1px 0 7px;
 
   font-family: "Montserrat";
-  font-weight: 500;
+  font-weight: 400;
 }
-.min {
-  color: aqua;
+.min-temp1,
+.min-temp2,
+.min-temp3,
+.min-temp4,
+.min-temp5,
+.min-temp6,
+.min-temp7 {
+  font-family: "Montserrat";
+  color: rgba(219, 218, 218, 0.628);
+  font-size: 17px;
+  font-weight: 400;
 }
 
 #search {
