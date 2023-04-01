@@ -91,6 +91,13 @@ function displayFarenheitTemperature(event) {
   let temperatureElement = document.querySelector(".temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
+// Celcius convertion
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+//global operation not in function
 let celciusTemperature = null;
 
 // search form
@@ -98,7 +105,11 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 //farinheit
-let farenheitLink = document.querySelector(".fahrenheit-convertion");
+let farenheitLink = document.querySelector(".fahrenheit-conversion");
 farenheitLink.addEventListener("click", displayFarenheitTemperature);
+
+// celcius
+let celciusLink = document.querySelector(".celcius-conversion");
+celciusLink.addEventListener("click", displayCelciusTemperature);
 // show the first city by default
 search("Tokyo");
