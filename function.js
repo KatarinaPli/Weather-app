@@ -52,6 +52,7 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector(".show-humidity");
   let windElement = document.querySelector(".show-wind");
   let timeElement = document.querySelector(".time");
+  let iconElement = document.querySelector(".maneicon");
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
@@ -59,6 +60,10 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   timeElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 // api connection
 let city = "Tokyo";
