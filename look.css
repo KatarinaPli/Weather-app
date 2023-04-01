@@ -192,7 +192,14 @@ small .temperature,
   color: rgba(255, 255, 255, 0.838);
   text-shadow: rgba(0, 0, 0, 0.288) 1px 0 7px;
 }
-
+.units .activ {
+  color: rgba(255, 255, 255, 0.838);
+  cursor: default;
+  text-decoration: none;
+}
+.units .activ:hover {
+  text-decoration: none;
+}
 .data {
   font-style: italic;
   color: rgba(255, 253, 253, 0.64);
@@ -295,7 +302,7 @@ ul {
   color: rgba(255, 255, 255, 0.845);
   text-shadow: 5px 5px 10px rgba(151, 151, 151, 0.614);
 }
-a {
+.link-gitHub {
   text-decoration: none;
   color: rgba(164, 211, 10, 0.947);
 }

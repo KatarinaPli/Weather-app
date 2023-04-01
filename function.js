@@ -87,6 +87,10 @@ function handleSubmit(event) {
 //Farenheit convertion
 function displayFarenheitTemperature(event) {
   event.preventDefault();
+  // remove an active class from celcius link
+  celciusLink.classList.remove("activ");
+  // add this active class to a faremheit link
+  farenheitLink.classList.add("activ");
   let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector(".temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
@@ -94,10 +98,14 @@ function displayFarenheitTemperature(event) {
 // Celcius convertion
 function displayCelciusTemperature(event) {
   event.preventDefault();
+  // add an active class from celcius link
+  celciusLink.classList.add("activ");
+  // remove this active class to a faremheit link
+  farenheitLink.classList.remove("activ");
   let temperatureElement = document.querySelector(".temperature");
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
-//global operation not in function
+//global varior that is not in function
 let celciusTemperature = null;
 
 // search form
@@ -105,11 +113,11 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 //farinheit
-let farenheitLink = document.querySelector(".fahrenheit-conversion");
+let farenheitLink = document.querySelector("#fahrenheit-conversion");
 farenheitLink.addEventListener("click", displayFarenheitTemperature);
 
 // celcius
-let celciusLink = document.querySelector(".celcius-conversion");
+let celciusLink = document.querySelector("#celcius-conversion");
 celciusLink.addEventListener("click", displayCelciusTemperature);
 // show the first city by default
 search("Tokyo");
