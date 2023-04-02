@@ -44,6 +44,40 @@ function formatDate(timestamp) {
   }
   return `${hour}:${minute}`;
 }
+
+//doing a row for forecast line and we call a function to do it in ja not in html
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col-2">
+          <div class="weather-forecast-date">${day}</div>
+          <img
+            src="http://openweathermap.org/img/wn/50d@2x.png"
+            alt=""
+            width="45"
+          />
+          <div class="weather-forecast-temp">
+            <span class="max-temp">18°</span> <span class="min-temp">12°</span>
+          </div>
+        </div>
+     `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+// call the forecast by lon and lat coordinates fron api
+function getForecast(coordinates) {
+  console.log(coordinates);
+}
+
 // call the main temperature
 function displayTemperature(response) {
   let temperatureElement = document.querySelector(".temperature");
@@ -66,6 +100,8 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 // city
 function search(city) {
@@ -121,3 +157,4 @@ let celciusLink = document.querySelector("#celcius-conversion");
 celciusLink.addEventListener("click", displayCelciusTemperature);
 // show the first city by default
 search("Tokyo");
+displayForecast();
