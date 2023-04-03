@@ -2,7 +2,10 @@ body {
   background-image: url("img/J2.jpg");
 
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
 } /*
 .card {
   position: absolute;
@@ -252,12 +255,11 @@ small .temperature,
 
 .buttons {
   margin-left: 45px;
-  margin-top: 15px;
 }
 .first-button,
 .second-button {
   padding: 17px 26px;
-  margin: 15px auto 15px auto;
+  margin: 0 auto 10px auto;
 
   font-size: 14px;
   border-bottom-width: thin;
@@ -323,5 +325,22 @@ ul {
 }
 .link-gitHub {
   text-decoration: none;
-  color: rgba(164, 211, 10, 0.947);
+  color: rgba(198, 237, 6, 0.947);
+}
+.card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(15px);
+  display: block;
+  box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 0%;
+  padding: 37px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
