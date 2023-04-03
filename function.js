@@ -47,7 +47,8 @@ function formatDate(timestamp) {
 
 //doing a row for forecast line and we call a function to do it in ja not in html
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Mon", "Tue", "Wed"];
@@ -73,9 +74,16 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
-// call the forecast by lon and lat coordinates fron api
+// call the forecast by lon and lat coordin
 function getForecast(coordinates) {
   console.log(coordinates);
+
+  let apiKey = "4b3503b2f08a729413c4d33ef1186004";
+
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
+
+  axios.get(apiUrl).then(displayForecast);
 }
 
 // call the main temperature
@@ -157,4 +165,3 @@ let celciusLink = document.querySelector("#celcius-conversion");
 celciusLink.addEventListener("click", displayCelciusTemperature);
 // show the first city by default
 search("Tokyo");
-displayForecast();
